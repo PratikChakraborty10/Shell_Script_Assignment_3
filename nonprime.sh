@@ -1,21 +1,21 @@
-echo "Enter first number"
-read m
-echo "Enter second number"
-read n
-
-for a in $(seq $m $n)
+echo "Enter input1"
+read x
+echo "Enter input2"
+read y
+for a in $(seq $x $y)
 do
-    k=0
-    for i in $(seq 2 $(expr $a - 1))
-    do 
+k=0
+for i in $(seq 2 $(expr $a - 1))
+do 
         if [ $(expr $a % $i) -eq 0 ]
         then
             k=1
             break
         fi
     done
-    if [ $k -eq 0 ]
+    
+    if [ $k -eq 1 ]
     then
-    echo "Non-prime number are: $a"
+    echo "The non prime numbers are: $a"
     fi
 done
